@@ -1,5 +1,6 @@
+/* Exercise 04 - Fetch */
 :root {
-  --main-color: #121212;
+  --main-color: #000000;
   --main-light-color: #ffffff;
   --bg-color: #333333;
   --pokemon-yellow: #faca15;
@@ -11,4 +12,119 @@ body {
   background-color: var(--bg-color);
 }
 
-/* Add your code here */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #fac916;
+  color: #000000;
+}
+
+.brand-logo {
+  margin: 0;
+}
+
+.search-input {
+  flex: 0 1 320px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  background-color: var(--main-light-color);
+  color: var(--main-color);
+}
+
+.search-input::placeholder {
+  color: #666666;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  padding: 2rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+}
+
+.pokemon-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--main-light-color);
+  border: 1px solid #dddddd;
+  border-radius: 0;
+  text-align: center;
+}
+
+.pokemon-card:hover {
+  background-color: var(--pokemon-yellow);
+  color: var(--main-color);
+}
+
+.pokemon-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.pokemon-name {
+  margin: 0;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.pokemon-types {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon-type {
+  padding: 0.25rem 0.6rem;
+  border-radius: 0;
+  font-size: 0.75rem;
+  color: var(--main-light-color);
+  text-transform: capitalize;
+}

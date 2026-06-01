@@ -1,14 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 02 - Form</title>
-  </head>
-  <body>
-    <main>
-      <!-- Add your code here -->
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Exercise 02 - Form</title>
+  <style>
+    #rate::-webkit-inner-spin-button,
+    #rate::-webkit-outer-spin-button,
+    #current-age::-webkit-inner-spin-button,
+    #current-age::-webkit-outer-spin-button,
+    #retirement-age::-webkit-inner-spin-button,
+    #retirement-age::-webkit-outer-spin-button,
+    #tax-rate::-webkit-inner-spin-button,
+    #tax-rate::-webkit-outer-spin-button {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Roth IRA Calculator</h1>
+
+    <form>
+      <label for="balance">Balance ($)</label><br>
+      <input id="balance" name="balance" type="number" required /><br><br>
+
+      <label for="annual-contribution">Annual contribution (4)</label><br>
+      <input id="annual-contribution" name="annualContribution" type="number" required /><br><br>
+
+      <label>Maximize contributions?</label><br>
+      <input id="maximize-yes" name="maximize" type="radio" value="yes" />
+      <label for="maximize-yes">Yes</label>
+      <input id="maximize-no" name="maximize" type="radio" value="no" />
+      <label for="maximize-no">No</label><br><br>
+
+      <label for="rate">Expected rate of return (5)</label><br>
+      <input id="rate" name="rate" type="number" required /><br><br>
+
+      <label for="current-age">Current age</label><br>
+      <input id="current-age" name="currentAge" type="number" required /><br><br>
+
+      <label for="retirement-age">Retirement age</label><br>
+      <input id="retirement-age" name="retirementAge" type="number" required /><br><br>
+
+      <label for="tax-rate">Marginal tax rate (%)</label><br>
+      <input id="tax-rate" name="taxRate" type="number" required /><br><br>
+
+      <button type="submit">Calculate</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <p>
+      This exercise is a simplified version of the Roth IRA Calculator at
+      <a href="https://www.calculator.net/roth-ira-calculator.html">Calculator.net</a>
+    </p>
+  </main>
+</body>
+
 </html>
